@@ -1,5 +1,5 @@
 import './App.css';
-import Tariff from './Tarif';
+import Tariff from './components/Tarif';
 
 
 function App() {
