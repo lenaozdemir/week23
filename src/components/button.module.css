@@ -1,0 +1,11 @@
+.button{
+    width: 80%;
+    height: 25px;
+
+    border-radius: 8px;
+    border: none;
+    box-shadow: 4px 4px 10px 5px hsl(213, 16%, 11%);
+
+    color: #19334d;
+    background-color: rgb(216, 218, 219);
+}

@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './tarif.module.css';
-import Button from './Button'
+import Button from './Button';
+import TarifDetails from './TarifDetails';
 
-const Tariff = ({ name, price, background, speed, highlight }) => {
-    return (
-    <div className={ `${style.wrap} ${highlight ? style.highlight : '' } ${background}` }>
-      <h1 className={style.name}>{name}</h1>
-      <p className={style.price}>{price} руб. </p>
-      <p className={style.speed}>{speed}</p>
-      <p className={style.note}> Объем трафика не ограничен </p>
-      <Button/>
-    </div>
-    );
+const Tarif = ({ name, price, background, speed, highlight }) => {
+  const [showDetails, setShowDetails] = useState(false);
+
+  const handleOnDetailsClick = () => {
+    setShowDetails(true);
   };
 
-  export default Tariff;
-  
+  const handleBackClick = () => {
+    setShowDetails(false);
+  };
 
+  return (
+    <div className={`${style.wrap} ${highlight ? style.highlight : ''} ${background}`}>
+      <h1 className={style.name}>{name}</h1>
+      {!showDetails ? (
+        <Button onDetailsClick={handleOnDetailsClick} />
+      ) : (
+        <TarifDetails price={price} speed={speed} onBackClick={handleBackClick}/>
+      )}
+    </div>
+  );
+};
+
+export default Tarif;
