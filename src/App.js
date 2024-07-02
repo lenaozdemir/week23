@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import Tarif from './components/Tarif';
-import TarifDetails from './components/TarifDetails';
+import Tarif from './components/tairf/Tarif';
+import TarifDetails from './components/details/TarifDetails';
 
 function App() {
   const [selectedTariff, setSelectedTariff] = useState(null);

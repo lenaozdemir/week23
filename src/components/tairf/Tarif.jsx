@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import style from './tarif.module.css';
 import Button from './Button';
-import TarifDetails from './TarifDetails';
+import TarifDetails from '../details/TarifDetails';
 
 const Tarif = ({ name, price, background, speed, highlight }) => {
   const [showDetails, setShowDetails] = useState(false);

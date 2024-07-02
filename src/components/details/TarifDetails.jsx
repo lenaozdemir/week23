@@ -1,5 +1,5 @@
 import React from "react";
-import style from './tarif.module.css';
+import style from '../tairf/tarif.module.css';
 
 const TarifDetails = ({price, speed, onBackClick} ) => {
     return(
